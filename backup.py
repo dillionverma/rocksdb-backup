@@ -44,7 +44,7 @@ def restore(from_path: str, to_path: str) -> None:
 
     # restore db
     backup = rocksdb.BackupEngine(from_path)
-    backup.restore_latest_backup(to_path)
+    backup.restore_latest_backup(to_path, to_path)
 
     print("Restore complete: ",  os.path.basename(to_path))
 
